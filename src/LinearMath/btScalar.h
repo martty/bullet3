@@ -138,8 +138,8 @@ inline int btIsDoublePrecision()
 
 	#ifdef BT_DEBUG
 		#ifdef _MSC_VER
-			#include <stdio.h>
-			#define btAssert(x) { if(!(x)){printf("Assert " __FILE__ ":%u (%s)\n", __LINE__, #x);__debugbreak();	}}
+			#include "assert.hpp"
+			#define btAssert(x) pkyassert(x)
 		#else//_MSC_VER
 			#include <assert.h>
 			#define btAssert assert
